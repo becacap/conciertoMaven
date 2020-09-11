@@ -28,17 +28,15 @@ public class Configuracion
 		return hombreOrquesta;
 	}
 	
-	@Bean
+	@Bean(name = "tambor")
 	public Tambor getTambor() {
 		return new Tambor();
 	}
 	
-	@Bean
+	@Bean(name = "guitarra")
 	public Guitarra getGuitarra()
 	{
-		Guitarra guitarra= new Guitarra();
-		guitarra.setSonido("sonido puesto en clase");
-		return guitarra;
+		return new Guitarra();
 		
 	}
 	@Bean(name = "trompeta")
