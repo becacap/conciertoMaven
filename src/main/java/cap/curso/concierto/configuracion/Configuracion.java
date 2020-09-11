@@ -25,6 +25,7 @@ public class Configuracion
 		hombreOrquesta.getInstrumentos().add(getTambor());
 		hombreOrquesta.getInstrumentos().add(getGuitarra());
 		hombreOrquesta.getInstrumentos().add(getTrompeta());
+		hombreOrquesta.getInstrumentos().add(getTambor1());
 		return hombreOrquesta;
 	}
 	
@@ -33,6 +34,12 @@ public class Configuracion
 		return new Tambor();
 	}
 	
+	@Bean
+	public Tambor getTambor1() {
+		Tambor tambor = new Tambor();
+		tambor.setSonido("Nuevo tambor");
+		return tambor;
+	}
 	@Bean
 	public Guitarra getGuitarra()
 	{
