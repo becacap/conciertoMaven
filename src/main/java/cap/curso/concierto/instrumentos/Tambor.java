@@ -4,12 +4,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 //@Qualifier("tocameami")
 public class Tambor extends Instrumento
 {
 	@Override
-	@Value("bpom, pom, pom con anotaciones")
+	@Value("pom, pom, pom")
 	public void setSonido(String sonido)
 	{
 		// TODO Auto-generated method stub
