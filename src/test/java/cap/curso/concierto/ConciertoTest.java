@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -12,6 +13,7 @@ import cap.curso.concierto.configuracion.Configuracion;
 import cap.curso.concierto.instrumentos.Guitarra;
 import cap.curso.concierto.instrumentos.Tambor;
 import cap.curso.concierto.instrumentos.Trompeta;
+import cap.curso.concierto.musicos.MusicoInterface;
 import cap.curso.concierto.musicos.Solista;
 
 
@@ -26,6 +28,9 @@ public class ConciertoTest
 	private Tambor tambor;
 	@Autowired
 	private Guitarra guitarra;
+	@Autowired
+	@Qualifier("solista")
+	private MusicoInterface solista;
 	
 	
 
@@ -85,5 +90,16 @@ public class ConciertoTest
 		assertNull(getGuitarra().sonar());
 	}
 
+
+	@Test
+	public void solistaTest() {
+		assertNotNull(getSolista());
+	}
+
+
+
+	private MusicoInterface getSolista() {
+		return solista;
+	}
 
 }
