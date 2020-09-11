@@ -33,9 +33,9 @@ public class PropietarioDelTeatro
 		{
 			// BEFORE
 			if((int)joinPoint.getArgs()[0]==1)
-			System.err.println("seÃ±ores apaguen los moviles que va a empezar el concierto");
+			System.err.println("señoores apaguen los moviles que va a empezar el concierto");
 			salida = joinPoint.proceed();
-			System.err.println("seÃ±ores el concierto ha terminado, pueden encender sus moviles");
+			System.err.println("señores el concierto ha terminado, pueden encender sus moviles");
 			return salida;
 		} catch (Throwable e)
 		{
@@ -64,7 +64,7 @@ public class PropietarioDelTeatro
 		{
 			
 		}
-		System.out.println("SeÃ±ores todos los instrumentos estan arreglados, vamos a continuar el concierto");
+		System.out.println("Señores todos los instrumentos estan arreglados, vamos a continuar el concierto");
 		musico.tocar(2);
 		return salida;
 	}
