@@ -8,7 +8,7 @@ import cap.curso.concierto.anotaciones.Propietario;
 import cap.curso.concierto.excepciones.SinSonidoException;
 import cap.curso.concierto.instrumentos.Instrumento;
 
-@Component
+@Component("solista")
 public class Solista extends Musico
 {
 
@@ -17,7 +17,8 @@ public class Solista extends Musico
 	public void tocar(int estado) throws SinSonidoException
 	{
 		if(getInstrumento().getSonido().contentEquals("nada"))
-			throw new SinSonidoException("el "+getInstrumento().getClass().getSimpleName()+" esta roto");
+			throw new SinSonidoException("Se ha roto el instrumento "+getInstrumento().getClass().getSimpleName()+ ".");
+		
 		System.out.println(getInstrumento().sonar());
 	}
 	
@@ -28,6 +29,11 @@ public class Solista extends Musico
 	{
 		// TODO Auto-generated method stub
 		super.setInstrumento(instrumento);
+	}
+	
+	public Instrumento getInstrumento()
+	{
+		return super.getInstrumento();
 	}
 
 }

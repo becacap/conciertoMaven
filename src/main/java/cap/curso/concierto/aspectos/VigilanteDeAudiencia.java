@@ -21,7 +21,7 @@ public class VigilanteDeAudiencia
 	
 	@Before("sujetador()")
 	public void apagarMoviles() {
-		System.err.println("seÃ±ores apaguen los moviles que va a empezar el concierto");
+		System.err.println("señores apaguen los moviles que va a empezar el concierto");
 	}
 	
 	@AfterReturning("sujetador()")

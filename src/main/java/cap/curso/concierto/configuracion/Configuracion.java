@@ -10,6 +10,7 @@ import cap.curso.concierto.instrumentos.Guitarra;
 import cap.curso.concierto.instrumentos.Tambor;
 import cap.curso.concierto.instrumentos.Trompeta;
 import cap.curso.concierto.musicos.HombreOrquesta;
+import cap.curso.concierto.musicos.Solista;
 
 @Configuration
 @ComponentScan({"cap.curso.concierto.instrumentos",
@@ -28,16 +29,17 @@ public class Configuracion
 		return hombreOrquesta;
 	}
 	
+	
 	@Bean
 	public Tambor getTambor() {
 		return new Tambor();
 	}
-	
+		
 	@Bean
 	public Guitarra getGuitarra()
 	{
 		Guitarra guitarra= new Guitarra();
-		guitarra.setSonido("sonido puesto en clase");
+		guitarra.setSonido("sonido guitarra");
 		return guitarra;
 		
 	}
