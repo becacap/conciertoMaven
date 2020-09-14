@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.Scope;
 
 import cap.curso.concierto.instrumentos.Guitarra;
 import cap.curso.concierto.instrumentos.Tambor;
@@ -25,12 +26,20 @@ public class Configuracion
 		hombreOrquesta.getInstrumentos().add(getTambor());
 		hombreOrquesta.getInstrumentos().add(getGuitarra());
 		hombreOrquesta.getInstrumentos().add(getTrompeta());
+		hombreOrquesta.getInstrumentos().add(getTambor1());
 		return hombreOrquesta;
 	}
 	
 	@Bean
 	public Tambor getTambor() {
 		return new Tambor();
+	}
+	
+	@Bean
+	public Tambor getTambor1() {
+		Tambor tambor=new Tambor();
+		tambor.setSonido("sdfsdfsdf");
+		return tambor;
 	}
 	
 	@Bean
@@ -42,8 +51,19 @@ public class Configuracion
 		
 	}
 	@Bean(name = "trompeta")
+	
 	public Trompeta getTrompeta()
 	{
-		return new Trompeta();
+		Trompeta trompeta= new  Trompeta();
+		trompeta.setSonido("antes");
+		return trompeta;
+	}
+	
+	@Bean(name = "trompeta1")
+	public Trompeta getTrompeta1()
+	{
+		Trompeta trompeta= new  Trompeta();
+		trompeta.setSonido("despues");
+		return trompeta;
 	}
 }

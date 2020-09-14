@@ -13,7 +13,7 @@ import cap.curso.concierto.musicos.Musico;
 import cap.curso.concierto.musicos.Solista;
 
 @Aspect
-@Component
+//@Component
 public class PropietarioDelTeatro
 {
 
